@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TShirtApp;
 
 namespace TShirtAppTest
 {
@@ -10,24 +10,24 @@ namespace TShirtAppTest
         public void calculate_student_discount()
         {
             var discountCalculator = new DiscountProvider();
-            var discount = discountCalculator.StudentDiscount.GetStudentDiscount(100);
-            Assert.AreEqual(90, discount);
+            var studentDiscount = discountCalculator.Discount("Student");
+            Assert.AreEqual(typeof(StudentDiscount), studentDiscount.GetType());
         }
 
         [TestMethod]
         public void calculate_member_discount()
         {
             var discountCalculator = new DiscountProvider();
-            var discount = discountCalculator.MemberDiscount.GetMemberDiscount(100);
-            Assert.AreEqual(80, discount);
+            var memeberDiscount = discountCalculator.Discount("Member");
+            Assert.AreEqual(typeof(MemberDiscount), memeberDiscount.GetType());
         }
 
         [TestMethod]
         public void calculate_student_member_discount()
         {
             var discountCalculator = new DiscountProvider();
-            var discount = discountCalculator.StudentDiscount.GetStudentMemberDiscount(100);
-            Assert.AreEqual(70, discount);
+            var studentMemberDiscount = discountCalculator.Discount("StudentMember");
+            Assert.AreEqual(typeof(StudentMemberDiscount), studentMemberDiscount.GetType());
         }
     }
 }

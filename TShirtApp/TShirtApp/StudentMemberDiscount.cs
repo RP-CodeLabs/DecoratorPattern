@@ -4,7 +4,7 @@
     {
         public decimal GetDiscount(decimal total)
         {
-            return total + (total * 0.3m);
+            return total - (total * 0.3m);
         }
     }
 }

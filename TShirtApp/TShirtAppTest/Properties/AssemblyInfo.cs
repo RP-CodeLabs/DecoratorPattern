@@ -1,13 +1,12 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("TShirtAppTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("BGL Group Ltd")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TShirtAppTest")]
-[assembly: AssemblyCopyright("Copyright © BGL Group Ltd 2017")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
